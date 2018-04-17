@@ -10,6 +10,9 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "firebase": "^4.12.1",
+    "forge-ui": "^0.8.1",
+    "html-loader": "^0.5.5",
     "vue": "^2.5.11"
   },
   "browserslist": [

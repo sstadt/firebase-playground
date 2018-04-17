@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/scripts/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -10,6 +10,12 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+        }
+      },
       {
         test: /\.css$/,
         use: [
