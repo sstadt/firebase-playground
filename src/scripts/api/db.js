@@ -19,11 +19,15 @@ const messagesCollection = firebase.firestore().collection('messages');
 export const db = {
   currentUser: null,
   sendChatMessage(message) {
-    messagesCollection.add({
+    var data = {
       createdOn: new Date(),
-      author: store.currentUser,
-      message
-    });
+      author: db.currentUser.displayName,
+      message: message
+    };
+
+    console.log(data);
+
+    messagesCollection.add(data);
   }
 };
 
